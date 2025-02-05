@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Jurídico Dra Natalia Soledad Castillo & Dra Sonia Raquel Cuesta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: url('https://cdn.pixabay.com/photo/2020/01/19/08/24/justitia-4777073_1280.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f8f9fa; /* Texto blanco */
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-out; /* Animación de entrada */
+            position: relative;
+        }
+
+        /* Fondo adicional sin cubrir otras imágenes */
+        body::after {
+            content: "";
+            background: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1; /* Asegura que el fondo quede detrás de otros elementos */
+        }
+
+        /* Estilo del encabezado */
+        header {
+            margin-top: 80px;
+            font-size: 6rem; /* Título más grande */
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 80px;
+            color: #ffcc00; /* Letra amarilla */
+            text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7); /* Sombra fuerte para el texto */
+            height: 600px; /* Ajusté la altura */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(52, 58, 64, 0.9); /* Fondo oscuro para el encabezado */
+            border-bottom: 5px solid #ffcc00; /* Borde de color dorado para resaltar el título */
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para efecto profesional */
+            animation: slideInFromTop 1s ease-out; /* Animación para el encabezado */
+        }
+
+        .estudio-juridico {
+            font-size: 2.5rem;
+            color: #ffcc00;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            padding: 20px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 4rem; /* Título más grande */
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 4px;
+            font-weight: bold;
+            border: 3px solid #ffcc00; /* Borde dorado alrededor del título */
+            padding: 30px 60px;
+            display: inline-block;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Barra superior con la imagen y dirección */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #343a40; /* Fondo más oscuro */
+            color: #f8f9fa;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .top-bar img {
+            height: 100px; /* Tamaño ajustado de la imagen */
+            margin-right: 15px;
+            border-radius: 5px;
+            border: 5px solid #e6b800;
+        }
+
+        .top-bar p {
+            font-size: 1rem;
+        }
+
+        /* Estilos de la sección "Nuestros Servicios" */
+        .services-section {
+            margin-top: 50px;
+            padding: 40px;
+            background-color: rgba(52, 58, 64, 0.8); /* Fondo oscuro con transparencia */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 70%;
+            margin: 50px auto;
+            animation: slideIn 1s ease-out;
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            color: #ffcc00;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .service-item {
+            background-color: #495057;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-item h3 {
+            font-size: 1.8rem;
+            color: #ffcc00;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .service-item p {
+            font-size: 1.2rem;
+            color: #f8f9fa;
+            line-height: 1.5;
+        }
+
+        /* Alineación del botón de WhatsApp */
+        .whatsapp-container {
+            display: flex;
+            justify-content: center; /* Centra el botón */
+            margin-top: 30px;
+            gap: 20px; /* Separa los botones */
+        }
+
+        .whatsapp-button {
+            padding: 15px 30px;
+            background-color: #25d366;
+            color: white;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128c7e;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-100%); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInFromTop {
+            0% { opacity: 0; transform: translateY(-100%); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Barra superior con imagen y dirección -->
+    <div class="top-bar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Balanza_justicia.jpg" alt="Imagen logo o icono">
+        <p>Dirección: Av. Balbín 2080 San Miguel</p>
+    </div>
+
+    <!-- Título del Estudio Jurídico -->
+    <header>
+       
+        <h1>ESTUDIO JURÍDICO DRA NATALIA SOLEDAD CASTILLO & DRA SONIA RAQUEL CUESTA</h1>
+    </header>
+
+    <!-- Sección de Nuestros Servicios -->
+    <div class="services-section">
+        <h2>Nuestros Servicios</h2>
+
+        <div class="services-container">
+            <div class="service-item">
+                <h3>Asesoramiento Legal General</h3>
+                <p>Brindamos consultoría en diferentes ramas del derecho, ayudando a resolver cualquier duda legal.</p>
+            </div>
+            <div class="service-item">
+                <h3>Consultas Especializadas en Derecho de Familias</h3>
+                <p>Recibe una consulta personalizada para tu caso legal, desde derecho civil hasta comercial.</p>
+            </div>
+            <div class="service-item">
+                <h3>Representación Judicial en Tribunales</h3>
+                <p>Te representamos de manera eficaz y profesional en todas las instancias judiciales.</p>
+            </div>
+            <div class="service-item">
+                <h3>Consultas de Casos Personales</h3>
+                <p>Te orientamos y ayudamos a resolver situaciones legales personales o familiares.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor centrado para los botones de WhatsApp -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/5491151224702" class="whatsapp-button" target="_blank">Contactar Dra. Natalia</a>
+        <a href="https://wa.me/54911554864286" class="whatsapp-button" target="_blank">Contactar Dra. Cuesta</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - Estudio Jurídico Natalia Soledad Castillo & Sonia Raquel Cuesta</p>
+    </footer>
+
+</body>
+</html>
+
